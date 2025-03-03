@@ -1,13 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Code2, Database, Layout } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Code2, Database, Layout } from "lucide-react";
 
 const Skills = () => {
   const skills = {
-    frontend: ['React JS', 'HTML', 'CSS', 'Tailwind CSS'],
-    backend: ['Express JS'],
-    database: ['SQL'],
-    programming: ['JavaScript', 'TypeScript']
+    frontend: ["React JS", "Vue JS", "Ionic", "Tailwind CSS", "Bootstrap"],
+    backend: ["Express JS", "Node JS", "Firebase"],
+    database: ["SQL", "No SQL", "Cloud Firestore"],
+    programming: ["JavaScript", "TypeScript"],
   };
 
   const container = {
@@ -15,14 +15,14 @@ const Skills = () => {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const item = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 }
+    show: { opacity: 1, y: 0 },
   };
 
   return (
@@ -65,7 +65,9 @@ const Skills = () => {
             className="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow"
           >
             <Code2 className="w-12 h-12 text-accent mb-4" />
-            <h3 className="text-xl font-semibold mb-4">Backend & Programming</h3>
+            <h3 className="text-xl font-semibold mb-4">
+              Backend & Programming
+            </h3>
             <ul className="space-y-2">
               {[...skills.backend, ...skills.programming].map((skill) => (
                 <li key={skill} className="flex items-center">
